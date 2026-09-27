@@ -91,6 +91,14 @@
     .price { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--cream); }
     .total { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--sand); padding: 12px 14px; border-radius: 0; border: 0; }
     .total strong { font-family: Fraunces, Georgia, serif; font-size: 1.6rem; font-weight: 500; color: var(--lagoon-dk); }
+
+    #furniture .box { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--cream); margin-top: 8px; }
+    #furniture .meta, #furniture .note { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px; }
+    #furniture section { margin-top: 28px; }
+    #furniture h2 { font-size: 1.45rem; }
+    #furniture .sub { display: flex; justify-content: space-between; gap: 16px; padding: 8px 14px; background: var(--sand); border-top: 1px solid var(--line); }
+    #furniture .sub strong { font-family: Fraunces, Georgia, serif; font-weight: 500; color: var(--lagoon-dk); }
+    #furniture .total { margin-top: 14px; }
     footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); margin-top: 28px; padding-top: 14px; }
     @media (min-width: 800px) {
       .facts { grid-template-columns: repeat(4, 1fr); }
@@ -106,7 +114,7 @@
       <a href="#looks">Looks</a>
       <a href="#plan">Plan</a>
       <a href="#rooms">Rooms</a>
-      <a href="furniture.html">Furniture</a>
+      <a href="#furniture">Furniture</a>
       <a href="#price">Price</a>
     </nav>
   </header>
@@ -169,7 +177,7 @@
 
     <section id="price">
       <h2>Build your price</h2>
-      <p class="lede">Unfurnished is walk-in: dried in, skinned, and on the concrete slab with hurricane anchors. It is not connected. Add water, power, septic, and cooling if someone will live here. Furniture is a separate list. <a href="furniture.html">See every piece, by room.</a> Solar is an estimate for a system sized to this house in Belize, in US dollars. The panels stay off the open roof deck. Permits are not in this price.</p>
+      <p class="lede">Unfurnished is walk-in: dried in, skinned, and on the concrete slab with hurricane anchors. It is not connected. Add water, power, septic, and cooling if someone will live here. Furniture is listed on this page. <a href="#furniture">See every piece, by room.</a> Solar is an estimate for a system sized to this house in Belize, in US dollars. The panels stay off the open roof deck. Permits are not in this price.</p>
       <div class="toggles">
         <button class="toggle" id="tog-furn" type="button">Add furniture and finishes</button>
         <button class="toggle" id="tog-live" type="button">Add water, power, septic, and cooling</button>
@@ -177,6 +185,42 @@
       </div>
       <div class="price" id="price-box"></div>
     </section>
+
+    <section id="furniture">
+      <h2>Furniture, fixtures, and equipment</h2>
+      <p class="lede">This is what “Add furniture and finishes” includes. Same container, either outside. The dollars are allowances for these pieces, not a store brand. Air conditioning, solar, water, and septic are the other switches. The roof deck boards are in the house price.</p>
+      <div class="total"><span>Furniture and finishes</span><strong>$157,586</strong></div>
+
+    <section>
+      <h2>Through the whole house</h2>
+      <p class="meta">Floors, doors, and glass. These are not repeated in each room.</p>
+      <div class="box">
+        <div class="row"><span>Porcelain floors, sand, 2,850 sq ft, installed</span><span>$40,755</span></div><div class="row"><span>Hardwood interior doors, about 14, with hardware, installed</span><span>$12,727</span></div><div class="row"><span>Aluminum sliders and glass, upgrade over the factory windows</span><span>$22,880</span></div>
+        <div class="sub"><span>Through the house</span><strong>$76,362</strong></div>
+      </div>
+    </section>
+
+    <section><h2>Veranda</h2><p class="meta">Ground · 10 ft deep</p><p class="note">Lounge chairs are not in this package.</p><div class="box"><div class="row"><span>Wall lights</span><span>$429</span></div><div class="sub"><span>Veranda in this package</span><strong>$429</strong></div></div></section>
+<section><h2>Foyer</h2><p class="meta">Ground</p><p class="note">No foyer furniture in this package.</p><div class="box"><div class="row"><span>Pendant light</span><span>$286</span></div><div class="sub"><span>Foyer in this package</span><strong>$286</strong></div></div></section>
+<section><h2>Powder room</h2><p class="meta">Ground · 5 × 5 ft</p><div class="box"><div class="row"><span>Quartz vanity top, installed</span><span>$601</span></div><div class="row"><span>Mirror, light, and accessories</span><span>$143</span></div><div class="sub"><span>Powder room in this package</span><strong>$744</strong></div></div></section>
+<section><h2>Living</h2><p class="meta">Ground · 18 × 16 ft</p><div class="box"><div class="row"><span>Linen sofa</span><span>$3,432</span></div><div class="row"><span>Two linen lounge chairs</span><span>$2,288</span></div><div class="row"><span>Teak coffee table</span><span>$1,144</span></div><div class="row"><span>Teak side table</span><span>$572</span></div><div class="row"><span>Sand rug</span><span>$1,144</span></div><div class="row"><span>Floor lamp and ceiling light</span><span>$715</span></div><div class="row"><span>Window treatments on the sliders</span><span>$858</span></div><div class="sub"><span>Living in this package</span><strong>$10,153</strong></div></div></section>
+<section><h2>Chef's kitchen</h2><p class="meta">Ground · 16 × 22 ft</p><p class="note">The pantry beside it has shelves only. No loose pantry furniture.</p><div class="box"><div class="row"><span>Quartz island and perimeter tops, installed</span><span>$9,009</span></div><div class="row"><span>Three pendants over the island</span><span>$715</span></div><div class="row"><span>48-inch range</span><span>$3,575</span></div><div class="row"><span>Range hood</span><span>$1,144</span></div><div class="row"><span>Refrigerator</span><span>$2,860</span></div><div class="row"><span>Dishwasher</span><span>$858</span></div><div class="row"><span>Microwave</span><span>$572</span></div><div class="sub"><span>Chef's kitchen in this package</span><strong>$18,733</strong></div></div></section>
+<section><h2>Dining</h2><p class="meta">Ground · 14 × 14 ft</p><div class="box"><div class="row"><span>Teak table for eight</span><span>$2,288</span></div><div class="row"><span>Eight dining chairs</span><span>$2,717</span></div><div class="row"><span>Pendant light</span><span>$429</span></div><div class="row"><span>Window treatments</span><span>$572</span></div><div class="sub"><span>Dining in this package</span><strong>$6,006</strong></div></div></section>
+<section><h2>Primary bedroom</h2><p class="meta">Ground · 16 × 16 ft</p><div class="box"><div class="row"><span>King bed, sand linen</span><span>$4,004</span></div><div class="row"><span>Two teak nightstands</span><span>$1,144</span></div><div class="row"><span>Dresser</span><span>$1,716</span></div><div class="row"><span>Bench at the foot of the bed</span><span>$1,144</span></div><div class="row"><span>Ceiling light</span><span>$286</span></div><div class="row"><span>Window treatments</span><span>$1,001</span></div><div class="sub"><span>Primary bedroom in this package</span><strong>$9,295</strong></div></div></section>
+<section><h2>Walk-in closet</h2><p class="meta">Ground · 8 × 8 ft</p><p class="note">No closet system in this package. The porcelain floor is in the house-wide line.</p></section>
+<section><h2>Primary bath</h2><p class="meta">Ground · 14 × 8 ft</p><div class="box"><div class="row"><span>Quartz vanity top, installed</span><span>$3,604</span></div><div class="row"><span>Mirror, sconces, and accessories</span><span>$715</span></div><div class="sub"><span>Primary bath in this package</span><strong>$4,319</strong></div></div></section>
+<section><h2>Laundry</h2><p class="meta">Ground · 8 × 7 ft</p><div class="box"><div class="row"><span>Washer</span><span>$1,144</span></div><div class="row"><span>Dryer</span><span>$715</span></div><div class="sub"><span>Laundry in this package</span><strong>$1,859</strong></div></div></section>
+<section><h2>Bedroom 2</h2><p class="meta">Second · 13 × 12 ft</p><div class="box"><div class="row"><span>Queen bed, sand linen</span><span>$2,288</span></div><div class="row"><span>Two teak nightstands</span><span>$858</span></div><div class="row"><span>Dresser</span><span>$858</span></div><div class="row"><span>Ceiling light</span><span>$286</span></div><div class="row"><span>Window treatments</span><span>$715</span></div><div class="sub"><span>Bedroom 2 in this package</span><strong>$5,005</strong></div></div></section>
+<section><h2>Bedroom 3</h2><p class="meta">Second · 13 × 14 ft</p><div class="box"><div class="row"><span>Queen bed, sand linen</span><span>$2,288</span></div><div class="row"><span>Two teak nightstands</span><span>$858</span></div><div class="row"><span>Dresser</span><span>$858</span></div><div class="row"><span>Ceiling light</span><span>$286</span></div><div class="row"><span>Window treatments</span><span>$715</span></div><div class="sub"><span>Bedroom 3 in this package</span><strong>$5,005</strong></div></div></section>
+<section><h2>Sitting room</h2><p class="meta">Second · 16 × 20 ft</p><p class="note">No sofa or chairs in this package.</p><div class="box"><div class="row"><span>Ceiling light</span><span>$429</span></div><div class="row"><span>Window treatments</span><span>$715</span></div><div class="sub"><span>Sitting room in this package</span><strong>$1,144</strong></div></div></section>
+<section><h2>Balcony</h2><p class="meta">Second</p><p class="note">No balcony furniture in this package.</p></section>
+<section><h2>Bath 2</h2><p class="meta">Second · 9 × 8 ft</p><div class="box"><div class="row"><span>Quartz vanity top, installed</span><span>$2,402</span></div><div class="row"><span>Mirror, light, and accessories</span><span>$286</span></div><div class="sub"><span>Bath 2 in this package</span><strong>$2,688</strong></div></div></section>
+<section><h2>Bath 3</h2><p class="meta">Second · 9 × 8 ft</p><div class="box"><div class="row"><span>Quartz vanity top, installed</span><span>$2,402</span></div><div class="row"><span>Mirror, light, and accessories</span><span>$286</span></div><div class="sub"><span>Bath 3 in this package</span><strong>$2,688</strong></div></div></section>
+<section><h2>Roof deck</h2><p class="meta">Roof · 1,000 sq ft open</p><p class="note">The Trex deck itself is in the house price, not in this list. A low metal roof covers only the outdoor kitchen.</p><div class="box"><div class="row"><span>Outdoor dining table and eight chairs</span><span>$4,290</span></div><div class="row"><span>Lounge seating</span><span>$4,290</span></div><div class="row"><span>Four bar stools at the outdoor kitchen</span><span>$2,145</span></div><div class="row"><span>Daybed</span><span>$1,430</span></div><div class="row"><span>Path lights</span><span>$143</span></div><div class="row"><span>Grill</span><span>$572</span></div><div class="sub"><span>Roof deck in this package</span><strong>$12,870</strong></div></div></section>
+
+    <div class="total"><span>Same number the switch adds</span><strong>$157,586</strong></div>
+    </section>
+
     <footer>Working price for presentation. Not a factory contract. USD. Moonlight Bay de Consejo, Belize.</footer>
   </main>
   <script>
