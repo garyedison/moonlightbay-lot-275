@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lot 275 · Beach house · Moonlight Bay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Figtree:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root { --linen:#f4efe6; --cream:#fbf7f0; --sand:#efe4d4; --ink:#1c1917; --muted:#5c5854; --lagoon:#1e4d4a; --deep:#143936; --line:#c9bba8; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--linen); color:var(--ink); font:16px/1.5 Figtree, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 28px 16px 64px; }
+  h1,h2 { font-family: Fraunces, serif; color: var(--deep); font-weight: 560; margin: 0; }
+  h1 { font-size: 40px; }
+  h2 { font-size: 28px; margin-top: 36px; }
+  .muted { color: var(--muted); }
+  .stats { display:grid; grid-template-columns: repeat(4,1fr); gap:10px; margin-top:16px; }
+  .stat,.card { background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:10px 12px; }
+  .stat b { display:block; }
+  .hero { display:grid; grid-template-columns: 1.4fr .8fr; gap:16px; margin-top:22px; }
+  img { width:100%; border-radius:12px; border:1px solid var(--line); display:block; }
+  button { font: inherit; cursor: pointer; }
+  .looks, .toggles, .rooms { display:flex; gap:8px; flex-wrap:wrap; }
+  .looks button, .toggles button, .rooms button, .plan button { border:1px solid var(--line); background:var(--cream); border-radius:12px; padding:10px 12px; text-align:left; }
+  .on { background:var(--lagoon) !important; color:var(--cream); border-color:var(--lagoon) !important; }
+  .plans { display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:12px; }
+  .grid { display:grid; grid-template-columns: repeat(12,1fr); gap:4px; }
+  .plan button { min-height: 58px; font-size: 13px; }
+  .s4 { grid-column: span 4; } .s3 { grid-column: span 3; } .s5 { grid-column: span 5; }
+  .s6 { grid-column: span 6; } .s12 { grid-column: span 12; } .tall { grid-row: span 2; min-height: 92px; }
+  table { width:100%; border-collapse: collapse; margin-top:12px; background:var(--cream); }
+  td, th { text-align:left; padding:8px 12px; border-top:1px solid var(--line); font-size:14px; }
+  th { background:var(--lagoon); color:var(--cream); }
+  .total { display:flex; justify-content:space-between; align-items:center; background:var(--sand); padding:12px; }
+  .total b { font-family: Fraunces, serif; font-size: 28px; color: var(--deep); }
+  @media (max-width: 800px) {
+    .hero, .plans, .stats { grid-template-columns: 1fr; }
+    h1 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="#top" style="color:var(--lagoon);font-weight:600;text-decoration:none">Moonlight Bay</a></p>
+  <header id="top">
+    <h1>Lot 275 · Beach house</h1>
+    <p class="muted">0.26 acres on the bay. 3 bedrooms, 3.5 baths, a chef's kitchen, and a 1,000 sq ft roof deck. Caribbean Salt inside either outside.</p>
+    <div class="stats">
+      <div class="stat"><span class="muted">Beds / baths</span><b>3 / 3.5</b></div>
+      <div class="stat"><span class="muted">Interior</span><b>2,850 sq ft</b></div>
+      <div class="stat"><span class="muted">Shells</span><b>11 down · 8 up</b></div>
+      <div class="stat"><span class="muted">This price</span><b id="priceHead">$371,760</b></div>
+    </div>
+  </header>
+  <section class="hero">
+    <figure>
+      <img id="photo" src="images/exterior-cement.jpg" alt="Lot 275 exterior" />
+      <figcaption id="cap" class="muted">Lot · Outside · 0.26 acres</figcaption>
+    </figure>
+    <div>
+      <div class="looks">
+        <button id="b1" class="on" onclick="setLook('cement')">Option 1<br><b>Fiber cement</b></button>
+        <button id="b2" onclick="setLook('container')">Option 2<br><b>Container</b></button>
+      </div>
+      <p id="note">Option 1 is the smooth cream fiber-cement skin. It reads as a concrete house. The steel is still there, painted cream, under and at the edges.</p>
+    </div>
+  </section>
+  <h2>The plan</h2>
+  <p class="muted">Same rooms as the sheet: ground floor, second floor, and the open roof. Eleven shells downstairs and eight upstairs. The kitchen on the sheet is 14 by 9 feet. That cannot be the chef's kitchen in the pictures, so this plan makes it 16 by 22. The other rooms stay within a few feet of the sheet. Tap a room.</p>
+  <div class="plans">
+    <div>
+      <h3>Ground floor · 1,700 sq ft on the sheet</h3>
+      <div class="grid" id="g1"></div>
+    </div>
+    <div>
+      <h3>Second floor · 1,150 sq ft on the sheet</h3>
+      <div class="grid" id="g2"></div>
+    </div>
+  </div>
+  <h2>Rooms</h2>
+  <div class="rooms" id="rooms"></div>
+  <h2 id="price">Build your price</h2>
+  <p class="muted">Unfurnished is walk-in: dried in, skinned, and on the slab. It is not connected. Add water, power, septic, and cooling if someone will live here. Furniture is separate. Permits are not in this price.</p>
+  <div class="toggles">
+    <button id="furn" onclick="toggle('furnished')">Add furniture and finishes</button>
+    <button id="live" onclick="toggle('live')">Add water, power, septic, and cooling</button>
+  </div>
+  <div id="table"></div>
+  <p class="muted">Working price for presentation. Not a factory contract. USD. Moonlight Bay de Consejo, Belize. Shells: 11 on the ground, 8 on the second floor, 3 shipping containers in the base case.</p>
+</main>
+<script>
+const rooms = {
+  exterior: ["Outside","Lot","0.26 acres","", "Same massing either way. Two stories, a one-story wing, and an open roof deck."],
+  veranda: ["Veranda","Ground","10 ft deep","images/veranda.jpg","Covered teak veranda facing the bay. The foyer opens onto it."],
+  living: ["Living","Ground","18 × 16 ft","images/living.jpg","Opens to the chef's kitchen and the veranda."],
+  kitchen: ["Chef's kitchen","Ground","16 × 22 ft","images/kitchen.jpg","Larger than the 14 × 9 kitchen on the original sheet, so the picture and the plan match."],
+  dining: ["Dining","Ground","14 × 14 ft","images/dining.jpg","Seats eight, on the veranda slider."],
+  primary: ["Primary bedroom","Ground","16 × 16 ft","images/primary.jpg","Walk-in closet and primary bath open off this room."],
+  bath1: ["Primary bath","Ground","14 × 8 ft","images/bath-primary.jpg","Tub, shower, teak vanity, quartz top. The powder room is the half bath by the foyer."],
+  bed2: ["Bedroom 2","Second","13 × 12 ft","images/bed2.jpg","Guest room, garden side."],
+  bed3: ["Bedroom 3","Second","13 × 14 ft","images/bed3.jpg","Guest room, bay side."],
+  sitting: ["Sitting room","Second","16 × 20 ft","images/sitting.jpg","Upstairs lounge. Doors to the covered balcony."],
+  bath2: ["Baths 2 and 3","Second","9 × 8 ft each","images/bath-guest.jpg","One bath for each guest room."],
+  roof: ["Roof deck","Roof","1,000 sq ft","images/roof.jpg","Open to the sky. A low metal roof covers only the outdoor kitchen."]
+};
+const ground = [["primary","Primary 16×16","s4 tall"],["bath1","Primary bath","s3"],["dining","Dining 14×14","s5 tall"],["kitchen","Chef kitchen 16×22","s4 tall"],["living","Living 18×16","s3 tall"],["veranda","Covered veranda · foyer and powder","s12"]];
+const second = [["bed2","Bedroom 2 · 13×12","s4 tall"],["sitting","Sitting 16×20","s4 tall"],["bed3","Bedroom 3 · 13×14","s4 tall"],["bath2","Bath 2 and bath 3","s6"],["roof","Stair to the roof deck","s6"]];
+let look = "cement", furnished = false, live = false, room = "exterior";
+function usd(n){ return n.toLocaleString("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}); }
+function setLook(v){ look=v; room="exterior"; render(); }
+function toggle(k){ if(k==="furnished") furnished=!furnished; else live=!live; render(); }
+function pick(id){ room=id; render(); }
+function lines(){
+  const shell = [["Shells landed on the lot",197840],["Slab and hurricane anchors",21450],["Crane and set",20020],["Assembly",40500]];
+  const skin = look==="cement"
+    ? [["Fiber-cement walls, cream",25740],["Trex accent boards",9720],["Install the skin",17160],["Cream marine paint on the steel",16450]]
+    : [["Cream marine paint on the containers",16450]];
+  const roof = [["Trex roof deck, 1,000 sq ft",14300],["Install the roof deck",8580]];
+  const out = [["House", shell],[look==="cement"?"Option 1 · fiber cement":"Option 2 · container", skin],["Roof", roof]];
+  if (furnished) out.push(["Furnished", [["Porcelain floors",40755],["Quartz tops, kitchen and baths",18018],["Hardwood doors",12727],["Aluminum glass, upgrade",22880],["Furniture, lighting, and window treatments",51766],["Appliances, including the roof grill",11440]]]);
+  if (live) out.push(["Ready to live in", [["Septic and soakaway",12155],["Cistern, pump, and pressure tank",12870],["Electrical service, 60 Hz",12155],["Five coastal air conditioners",22880],["Water heater and termite treatment",4147]]]);
+  return out;
+}
+function render(){
+  const r = rooms[room];
+  const src = room==="exterior" ? (look==="cement"?"images/exterior-cement.jpg":"images/exterior-container.jpg") : r[3];
+  document.getElementById("photo").src = src;
+  document.getElementById("cap").textContent = r[1]+" · "+r[0]+" · "+r[2];
+  document.getElementById("note").textContent = room==="exterior"
+    ? (look==="cement" ? "Option 1 is the smooth cream fiber-cement skin. It reads as a concrete house. The steel is still there, painted cream, under and at the edges." : "Option 2 leaves the containers visible: module lines, corner castings, and cream marine paint. No fiber-cement field.")
+    : r[4];
+  document.getElementById("b1").className = look==="cement"?"on":"";
+  document.getElementById("b2").className = look==="container"?"on":"";
+  document.getElementById("furn").className = furnished?"on":"";
+  document.getElementById("live").className = live?"on":"";
+  const groups = lines();
+  let total = 0;
+  let html = "<table>";
+  groups.forEach(g => { html += "<tr><th colspan='2'>"+g[0]+"</th></tr>"; g[1].forEach(row => { total += row[1]; html += "<tr><td>"+row[0]+"</td><td>"+usd(row[1])+"</td></tr>"; }); });
+  html += "</table><div class='total'><span>"+(furnished?"Furnished":"Unfurnished")+(live?" · ready to live in":" · walk-in")+"</span><b>"+usd(total)+"</b></div>";
+  document.getElementById("table").innerHTML = html;
+  document.getElementById("priceHead").textContent = usd(total);
+  document.querySelectorAll("[data-room]").forEach(b => b.className = b.getAttribute("data-room")===room ? b.className.replace(" on","")+" on" : b.className.replace(" on",""));
+}
+function fill(id, cells){
+  document.getElementById(id).innerHTML = cells.map(c => `<button data-room="${c[0]}" class="${c[2]}" onclick="pick('${c[0]}')">${c[1]}</button>`).join("");
+}
+fill("g1", ground); fill("g2", second);
+document.getElementById("rooms").innerHTML = Object.keys(rooms).map(id => `<button data-room="${id}" onclick="pick('${id}')">${rooms[id][0]}</button>`).join("");
+render();
+</script>
+</body>
+</html>
