@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lot 242 · Beach house · Moonlight Bay</title>
-  <meta name="description" content="Lot 242 at Moonlight Bay de Consejo. Two outsides on one beach plan: cream fiber cement, or the container left visible. Both on a concrete slab with hurricane anchors. 3 bed, 3.5 bath, chef's kitchen, open roof deck." />
+  <meta name="description" content="Lot 242 at Moonlight Bay de Consejo. The same container house with two outsides: fiber cement over the shells, or the containers left visible. Inside is the container shell either way. Both on a concrete slab with hurricane anchors." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
@@ -111,8 +111,8 @@
   </header>
   <main class="wrap" id="top">
     <p class="kicker">Lot 242 · beach · Moonlight Bay de Consejo</p>
-    <h1>On the bay. Two outsides. One plan.</h1>
-    <p class="lede">0.26 acres of dry sand, water in front of the house, not under it. 3 bedrooms, 3.5 baths, a chef's kitchen, and a 1,000 sq ft roof deck left open to the sky. Caribbean Salt inside either outside.</p>
+    <h1>Same container house. Two outsides.</h1>
+    <p class="lede">Both options are the same container shells. Inside is that shell, finished Caribbean Salt. Only the outside changes. 0.26 acres of dry sand, water in front of the house, not under it. 3 bedrooms, 3.5 baths, a chef's kitchen, and a 1,000 sq ft roof deck left open to the sky.</p>
     <div class="facts">
       <div><strong>3 / 3.5</strong><span>Beds / baths</span></div>
       <div><strong>2,850 sq ft</strong><span>Interior</span></div>
@@ -121,16 +121,16 @@
     </div>
 
     <section id="looks">
-      <h2>The two outsides</h2>
-      <p class="lede">Option 1 is the smooth cream fiber-cement skin. It reads as concrete. Option 2 leaves the containers visible: module lines, corner castings, cream marine paint. Same windows, same veranda, same balcony, same open roof. Both sit on a concrete slab with hurricane anchors.</p>
+      <h2>The same container. Two outsides.</h2>
+      <p class="lede">Option 1 covers the outside with a smooth cream fiber-cement skin. It reads as concrete. The inside is still the container shell. Option 2 leaves those same containers visible: module lines, corner castings, cream marine paint. Same rooms, same windows, same veranda, same balcony, same open roof. Both sit on a concrete slab with hurricane anchors.</p>
       <div class="looks">
         <button class="look on" id="look-cement" type="button">
           <img src="images/exterior-cement.jpg" alt="Option 1, cream fiber cement on the beach" />
-          <span><small>Option 1</small>Fiber cement</span>
+          <span><small>Option 1</small>Fiber-cement outside</span>
         </button>
         <button class="look" id="look-container" type="button">
           <img src="images/exterior-container.jpg" alt="Option 2, container home on the same plan" />
-          <span><small>Option 2</small>Container</span>
+          <span><small>Option 2</small>Container outside</span>
         </button>
       </div>
     </section>
@@ -140,7 +140,7 @@
         <img id="hero" src="images/exterior-cement.jpg" alt="Outside" />
         <figcaption id="caption">Lot 242 · Outside · 0.26 acres · Option 1</figcaption>
       </figure>
-      <p id="blurb">Same house either way. Bay in front, dry sand under the house, veranda, balcony, open roof.</p>
+      <p id="blurb">The same container shells either way. Option 1 covers the outside with fiber cement. Option 2 leaves the containers visible.</p>
     </section>
 
     <section id="plan">
@@ -180,7 +180,7 @@
   </main>
   <script>
     const rooms = {
-      exterior: ["Outside", "Lot 242", "0.26 acres", "Same house either way, on a concrete slab with hurricane anchors. Bay in front, dry sand under the house, veranda, balcony, open roof.", ""],
+      exterior: ["Outside", "Lot 242", "0.26 acres", "The same container shells either way. Option 1 covers the outside with fiber cement. Option 2 leaves the containers visible. Concrete slab and hurricane anchors. Bay in front, dry sand under the house.", ""],
       veranda: ["Veranda", "Ground", "10 ft deep", "Covered teak veranda across the bay face. Foyer and the powder room sit behind it.", "veranda.jpg"],
       living: ["Living", "Ground", "18 × 16 ft", "Opens to the chef's kitchen and the veranda.", "living.jpg"],
       kitchen: ["Chef's kitchen", "Ground", "16 × 22 ft", "Drawn larger than the 14 × 9 kitchen on the sheet, so this room matches the photo. Pantry is beside it. Island and a 48-inch range.", "kitchen.jpg"],
@@ -271,7 +271,7 @@
       });
       const groups = [
         ["House", shell],
-        [look === "cement" ? "Option 1 · fiber cement" : "Option 2 · container", look === "cement" ? cementSkin : boxSkin],
+        [look === "cement" ? "Option 1 · fiber-cement outside" : "Option 2 · container outside", look === "cement" ? cementSkin : boxSkin],
         ["Roof", roofRows]
       ];
       if (furnished) groups.push(["Furnished", fit]);
